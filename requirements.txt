@@ -1,0 +1,5 @@
+numpy
+tqdm
+pandas
+openai
+backoff
