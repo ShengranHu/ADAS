@@ -126,22 +126,22 @@ class LLMAgentBase():
     def query(self, input_infos: list, instruction, iteration_idx=-1) -> dict:
         system_prompt, prompt = self.generate_prompt(input_infos, instruction)
         try:
-            reponse_json = {}
-            reponse_json = get_json_response_from_gpt(prompt, self.model, system_prompt, self.temperature)
-            assert len(reponse_json) == len(self.output_fields), "not returning enough fields"
+            response_json = {}
+            response_json = get_json_response_from_gpt(prompt, self.model, system_prompt, self.temperature)
+            assert len(response_json) == len(self.output_fields), "not returning enough fields"
         except Exception as e:
             # print(e)
             if "maximum context length" in str(e) and SEARCHING_MODE:
                 raise AssertionError("The context is too long. Please try to design the agent to have shorter context.")
             # try to fill in the missing field
             for key in self.output_fields:
-                if not key in reponse_json and len(reponse_json) < len(self.output_fields):
-                    reponse_json[key] = ''
-            for key in copy.deepcopy(list(reponse_json.keys())):
-                if len(reponse_json) > len(self.output_fields) and not key in self.output_fields:
-                    del reponse_json[key]
+                if not key in response_json and len(response_json) < len(self.output_fields):
+                    response_json[key] = ''
+            for key in copy.deepcopy(list(response_json.keys())):
+                if len(response_json) > len(self.output_fields) and not key in self.output_fields:
+                    del response_json[key]
         output_infos = []
-        for key, value in reponse_json.items():
+        for key, value in response_json.items():
             info = Info(key, self.__repr__(), value, iteration_idx)
             output_infos.append(info)
         return output_infos
