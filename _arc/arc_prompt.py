@@ -90,7 +90,7 @@ Reflexion = {
         # Reflect on previous attempts and refine the answer
         # Only consider the latest attempts to control context length. You can try to increase the N_max.
         # The input to LLMAgentBase should be a list of Info.
-        thinking, code = cot_agent([taskInfo] + attemp, cot_reflect_instruction, i + 1)  
+        thinking, code = cot_agent([taskInfo] + attempt, cot_reflect_instruction, i + 1)  
 
     # Get the final answer after refinement
     answer = self.get_test_output_from_code(code)
