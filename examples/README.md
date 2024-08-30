@@ -38,9 +38,14 @@ https://aistudio.google.com/app/plan_information
 
 ## Setup
 ```bash
-# Install libraries
+# Install additional libraries
+pip install google-generativeai colorama python-dotenv
+
+or 
+
 # From the ADAS/examples directory run
 pip install -r requirements.txt
+
 
 # Add your Gemini API key to the example.env file
 GEMINI_API_KEY=""
