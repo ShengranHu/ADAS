@@ -1,0 +1,8 @@
+numpy
+tqdm
+pandas
+openai
+backoff
+google-generativeai
+colorama
+python-dotenv
