@@ -10,7 +10,7 @@ import backoff
 import numpy as np
 
 from tqdm import tqdm
-from colorama import Fore, Style, init
+from colorama import Fore, Style
 
 import time
 import sys
@@ -432,6 +432,7 @@ def evaluate(args):
     
     # Check if run archive exists
     if not os.path.exists(file_path):
+        print(f"Run archive file not found: {file_path}")
         logging.error(f"Run archive file not found: {file_path}")
         return
 
@@ -482,9 +483,13 @@ def evaluate_forward_fn(args, forward_str):
     setattr(AgentSystem, "forward", func)
             
     if SEARCHING_MODE:
-        arc_dir = os.path.join(os.path.expanduser("~"), "ADAS", "dataset", "ARC-800-tasks", "training")
+        arc_dir = "./../dataset/ARC-800-tasks/training"   
     else:
-        arc_dir = os.path.join(os.path.expanduser("~"), "ADAS", "dataset", "ARC-800-tasks", "evaluation")
+        arc_dir = "./../dataset/ARC-800-tasks/evaluation"
+
+    if not os.path.isdir(arc_dir):
+        print(f"Directory {arc_dir} does not exist.")
+        sys.exit(1)
 
     arc_data_queue = []
     file_names = []
@@ -541,7 +546,6 @@ def evaluate_forward_fn(args, forward_str):
             if args.log_visuals:
                 # Log the visualization with the JSON file name
                 visualization_logger.info(f"\nPuzzle: {json_file_name}\nVisualization:\n{visualization}")
-                #visualization_logger.info(f"Visualization:\n{visualization}")
         
             logging.info("Evaluating the solution")
             hard_score = eval_solution(res, arc_data, soft_eval=False)
@@ -550,9 +554,6 @@ def evaluate_forward_fn(args, forward_str):
         except Exception as e:
             logging.error(f"Error during evaluation for {file_name}: {e}")
             return 0
-
-    # Initialize colorama for Windows compatibility
-    #init()
 
     # Create a colorful tqdm progress bar
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
