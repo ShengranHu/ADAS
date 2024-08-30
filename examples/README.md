@@ -1,14 +1,27 @@
 <h1 align="center">
-  <img src="../../misc/art_fig.png" width="200" /></a><br>
+  <img src="./../misc/art_fig.png" width="200" /></a><br>
   <b>Automated Design of Agentic Systems</b><br>
 </h1>
 
 ### This example uses Gemini 1.5 Flash LLM. 
 ```Puzzles now displayed in terminal during evaluation```
 <h1 align="left">
-  <img src="misc/terminal_logs3.png" width="600" /></a><br>
+  <img src="gemini_arc/misc/terminal_logs4.png" width="600" /></a><br>
 </h1>
 
+
+
+## Gemini Model API Access
+
+### Get your free API Key:   
+<a href="https://ai.google.dev/gemini-api">https://ai.google.dev/gemini-api</a>
+
+
+<p align="left">
+<img src="gemini_arc/misc/gemini_key.png"  width="600"/></a><br>
+</p>
+
+### API Free Limits
 ```
 Free Tier RATE LIMITS  
 
@@ -21,16 +34,6 @@ Gemini 1.5 Flash
 Full details:
 https://aistudio.google.com/app/plan_information
 
-
-## Gemini Model API Access
-
-### Get your free API Key:   
-<a href="https://ai.google.dev/gemini-api">https://ai.google.dev/gemini-api</a>
-
-
-<p align="left">
-<img src="misc/gemini_key.png"  width="600"/></a><br>
-</p>
 
 ## Setup
 ```bash
