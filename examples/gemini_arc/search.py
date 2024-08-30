@@ -592,8 +592,8 @@ if __name__ == "__main__":
     parser.add_argument('--log_info', action='store_true', default=True, help='Enable info logging')
     parser.add_argument('--log_visuals', action='store_true', default=True, help='Enable logging of visualizations')
     parser.add_argument('--print_visuals', action='store_true', default=True, help='Print visualizations to terminal')
-    parser.add_argument('--num_puzzles', type=int, default=3, help='Number of puzzles to process')
-    parser.add_argument('--max_api_calls', type=int, default=20, help='Maximum number of API calls')
+    parser.add_argument('--num_puzzles', type=int, default=10, help='Number of puzzles to process')
+    parser.add_argument('--max_api_calls', type=int, default=100, help='Maximum number of API calls')
     
     args = parser.parse_args()
     
