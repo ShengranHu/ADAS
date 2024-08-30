@@ -3,7 +3,7 @@
   <b>Automated Design of Agentic Systems</b><br>
 </h1>
 
-### This example uses Gemini 1.5 Flash free tier.
+### This example uses Gemini 1.5 Flash free tier
 
 ```Puzzles now display in terminal during evaluation```
 <h1 align="left">
