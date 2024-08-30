@@ -4,9 +4,9 @@
 </h1>
 
 ### This example uses Gemini 1.5 Flash LLM. 
-```Puzzles now displayed in terminal during evaluation```
+```Puzzles now display in terminal during evaluation```
 <h1 align="left">
-  <img src="gemini_arc/misc/terminal_logs4.png" width="600" /></a><br>
+  <img src="gemini_arc/misc/terminal_logs2.png" width="600" /></a><br>
 </h1>
 
 
