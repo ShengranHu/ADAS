@@ -3,7 +3,8 @@
   <b>Automated Design of Agentic Systems</b><br>
 </h1>
 
-### This example uses Gemini 1.5 Flash LLM. 
+### This example uses Gemini 1.5 Flash free tier.
+
 ```Puzzles now display in terminal during evaluation```
 <h1 align="left">
   <img src="gemini_arc/misc/terminal_logs2.png" width="600" /></a><br>
@@ -11,7 +12,7 @@
 
 
 
-## Gemini Model API Access
+## Gemini Model API 
 
 ### Get your free API Key:   
 <a href="https://ai.google.dev/gemini-api">https://ai.google.dev/gemini-api</a>
