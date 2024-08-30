@@ -22,7 +22,7 @@
 <img src="gemini_arc/misc/gemini_key.png"  width="600"/></a><br>
 </p>
 
-### API Free Limits
+### API Free Usage
 ```
 Free Tier RATE LIMITS  
 
