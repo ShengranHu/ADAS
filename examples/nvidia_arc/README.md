@@ -43,7 +43,7 @@ Navigate to ADAS/examples folder. Launch experiment using the `search.py` script
 
 ```bash
 # From the ADAS/examples directory run
-python nvidia_api/mistral_large2/search.py
+python nvidia_arc/mistral_large2/search.py
 ```
 
 ### Customizing Meta Agent Search for New Domains

@@ -55,8 +55,8 @@ api_tracker = {
     'last_reset_time': time.time()
 }
 
-log_file = f"nvidia_api/mistral_large2/logs/arc_search_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-visualization_log_file = f"nvidia_api/mistral_large2/logs/arc_visualization_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+log_file = f"nvidia_arc/mistral_large2/logs/arc_search_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+visualization_log_file = f"nvidia_arc/mistral_large2/logs/arc_visualization_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 
 @backoff.on_exception(backoff.expo, Exception)
 def get_json_response_from_gpt(
@@ -565,7 +565,7 @@ if __name__ == "__main__":
     parser.add_argument('--multiprocessing', action='store_true', default=True)
     parser.add_argument('--max_workers', type=int, default=1)
     parser.add_argument('--debug', action='store_true', default=True)
-    parser.add_argument('--save_dir', type=str, default='nvidia_api/mistral_large2/results/')
+    parser.add_argument('--save_dir', type=str, default='nvidia_arc/mistral_large2/results/')
     parser.add_argument('--expr_name', type=str, default='arc_mistral_results')
     parser.add_argument('--n_generation', type=int, default=2)
     parser.add_argument('--reflect_max', type=int, default=1)
