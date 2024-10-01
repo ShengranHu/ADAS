@@ -190,7 +190,7 @@ class AgentSystem():
             try:
                 transformed_grid = transform(input_grid)
             except Exception as e:
-                return gen_output("Error during function execution: {e}"), correct_examples, wrong_examples
+                return gen_output(f"Error during function execution: {e}"), correct_examples, wrong_examples
 
             if transformed_grid == output_grid:
                 feedback += f"Your transform function generates a CORRECT answer in Example {idx}!\n\n"
@@ -229,7 +229,7 @@ class AgentSystem():
             transform_output = transform(test_input)
             transform_output = list_to_string(transform_output)
         except Exception as e:
-            return gen_output("Error during function execution: {e}")
+            return gen_output(f"Error during function execution: {e}")
 
         return gen_output(transform_output)
 
