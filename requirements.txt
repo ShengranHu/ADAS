@@ -4,3 +4,4 @@ pandas
 openai
 backoff
 scipy
+blobfile
