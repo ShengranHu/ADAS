@@ -10,6 +10,11 @@
   <a href="https://twitter.com/shengranhu/status/1825555341922480322"><img src="https://img.shields.io/badge/twitter-%230077B5.svg?&style=for-the-badge&logo=twitter&logoColor=white&color=00acee"></a>
 </p>
 
+<h3 align="center" style="display:inline-block; border:2px solid red; border-radius:4px; padding:4px; margin:4px 0;">
+  🏆 <strong>Outstanding Paper (NeurIPS 2024 Open-World Agent Workshop)</strong> 
+  <a href="https://x.com/shengranhu/status/1868475359060226191" target="_blank" style="margin-left:8px;">[Tweet]</a>
+</h3>
+
 In this work, we describe a newly forming research area **A**utomated **D**esign of **A**gentic **S**ystems (**ADAS**), which aims to *automatically create powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways.*
 
 
