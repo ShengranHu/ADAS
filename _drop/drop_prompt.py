@@ -200,17 +200,17 @@ Role_Assignment = {"thought": "Similar to Auto-GPT and expert prompting, we can 
         expert_agents = [LLMAgentBase(['thinking', 'answer'], 'Expert Agent', role=role) for role in ['Reading Comprehension Specialist', 'Logical Reasoning Strategist', 'Multidisciplinary Knowledge Integrator', 'Helpful Assistant']]
 
         # Instruction for routing the task to the appropriate expert
-        routing_instruction = "Given the task, please choose an Expert to answer the question. Choose from: Math Professor, Grade School Teacher, Math Enthusiast."
+        routing_instruction = "Given the task, please choose an Expert to answer the question. Choose from: Reading Comprehension Specialist, Logical Reasoning Strategist, and Multidisciplinary Knowledge Integrator."
         routing_agent = LLMAgentBase(['choice'], 'Routing agent')
 
         # Get the choice of expert to route the task
         choice = routing_agent([taskInfo], routing_instruction)[0]
 
-        if 'professor' in choice.content.lower():
+        if 'specialist' in choice.content.lower():
             expert_id = 0
-        elif 'teacher' in choice.content.lower():
+        elif 'strategist' in choice.content.lower():
             expert_id = 1
-        elif 'enthusiast' in choice.content.lower():
+        elif 'integrator' in choice.content.lower():
             expert_id = 2
         else:
             expert_id = 3 # Default to helpful assistant
